@@ -1,0 +1,201 @@
+@import '../../../styles/globals.scss';
+
+$widthD: 40vw;
+$widthM: 90vw;
+
+.content-portafolio {
+    @extend .content;
+    position: relative;
+    justify-content: center;
+    padding: 20px 0;
+    padding-left: 2vw;
+    padding-right: 1.5vw;
+    padding-top: 13vh;
+
+    h1 {
+        width: 90vw;
+        font-size: 3vh;
+        margin-bottom: 30px;
+        padding-left: 1vw;
+        text-shadow: 1px 1px 3px $blanco;
+        text-align: left;
+    }
+
+    .content-carrousel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px;
+        width: $widthD;
+        height: fit-content;
+        overflow: hidden;
+
+        @media only screen and (hover: none) and (pointer: coarse) {
+            width: $widthM;
+        }
+
+        .content-img-principal {
+            overflow: hidden;
+            width: $widthD;
+            height: calc($widthD /2);
+
+            @media only screen and (hover: none) and (pointer: coarse) {
+                width: $widthM;
+                height: calc($widthM /2);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                opacity: 0.3;
+
+                &.loaded {
+                    transition: 2s;
+                    opacity: 1;
+                }
+
+                &.onloaded {
+                    transition: 2s;
+                    opacity: 0;
+                }
+            }
+
+            .content-buttons-arrow {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+
+                .arrow {
+                    position: absolute;
+                    z-index: 2;
+                    top: 45%;
+                    width: 15px;
+                    height: 15px;
+                    padding: 6px;
+                    background-color: $negro;
+                    border-radius: 20px;
+                    text-align: center;
+
+                    &:hover {
+                        transform: scale(1.08);
+                        cursor: pointer;
+                        opacity: 1;
+                    }
+                }
+
+                .arrow-left {
+                    @extend .arrow;
+                    left: 10px;
+                }
+
+                .arrow-right {
+                    @extend .arrow;
+                    right: 10px;
+                }
+            }
+        }
+
+        .content-buttons-img {
+            display: inline-flex;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            margin-top: 10px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+
+            img {
+                opacity: 1;
+                width: 10vw;
+                height: auto;
+                padding: 0;
+                padding-left: 1px;
+                padding-right: 1px;
+                margin: auto;
+            }
+
+            .active {
+                border: 3px solid $violetaClaro;
+                border-radius: 10px;
+                width: calc(10vw + 2%);
+            }
+        }
+    }
+
+    .content-repo {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 10px;
+
+        img:hover {
+            filter: drop-shadow(2px 2px 4px $violeta);
+        }
+    }
+
+    h2 {
+        font-size: 2.5vh;
+        margin-bottom: 10px;
+    }
+
+    .content-descripcion {
+        width: $widthD;
+        margin: -5px;
+        padding: 0 3%;
+        padding-bottom: 40px;
+
+        @media only screen and (hover: none) and (pointer: coarse) {
+            width: $widthM;
+        }
+
+        p {
+            width: 100%;
+            color: $blanco;
+            font-size: 1.9vh;
+        }
+
+        b {
+            font-size: 1.4vh;
+            align-items: center;
+        }
+    }
+
+    .content-tecnologias {
+        width: 90vw;
+        padding: 25px 0;
+        padding-left: 3%;
+        border-top: 1px solid $grisClaro;
+        border-bottom: 1px solid $grisClaro;
+
+        h2 {
+            text-align: center;
+        }
+
+        .content-img-teconologias {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            img {
+                margin: 10px;
+            }
+        }
+    }
+
+    .content-video {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 30px;
+
+        video {
+            margin-bottom: 20px;
+            width: $widthM;
+
+            @media only screen and (hover: none) and (pointer: coarse) {
+                width: $widthM;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@import '../../styles/globals.scss';
+
+.content-footer {
+    padding-bottom: 20px;
+    
+    .content-redes-sociales {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        border-top: 1px solid $grisClaro;
+        width: 70%;
+
+        a {
+            margin: 10px;
+        }
+
+        img {
+            margin: 10px 0;
+
+            &:hover {
+                filter: drop-shadow(2px 2px 4px $violeta);
+            }
+        }
+    }
+
+    .content-herramientas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            color: $blanco;
+            font-size: 10px;
+        }
+
+        img {
+            margin-left: 10px;
+        }
+    }
+}

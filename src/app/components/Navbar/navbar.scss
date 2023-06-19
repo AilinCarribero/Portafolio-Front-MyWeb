@@ -1,0 +1,56 @@
+@import '../../../styles/globals.scss';
+@import '../../../styles/animates/scroll.scss';
+
+.content-navbar {
+    position: fixed;
+    display: flex;
+    z-index: 3;
+    top: 0;
+    background-color: $grisOscuro;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 13px;
+    box-shadow: 0px 0px 10px 2px $lila;
+    color: $violeta;
+
+    .link-logo-home {
+        margin-left: 4vw;
+        display: flex;
+        width:fit-content;
+
+        &:hover {
+            filter: drop-shadow(0px 0px 2px $lila);
+        }
+
+        img {
+            width: auto;
+            height: 5vh;
+            min-height: 40px;
+        }
+
+        h3 {
+            margin: auto 0;
+            margin-left: 5px;
+            line-height: 23px;
+        }
+    }
+
+    .content-link-navigation {
+        margin: auto;
+        margin-right: 5vw;
+        width:fit-content;
+
+        a {
+            padding: 20px;
+            color: $lila;
+
+            &:hover {
+                border: 2px solid $violetaSombra;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+        }
+    }
+}
